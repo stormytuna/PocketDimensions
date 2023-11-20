@@ -1,0 +1,4 @@
+displayName = Pocket Dimensions
+author = stormytuna
+version = 0.1
+modReferences = SubworldLibrary

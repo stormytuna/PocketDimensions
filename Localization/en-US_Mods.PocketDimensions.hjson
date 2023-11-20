@@ -1,0 +1,8 @@
+SubworldName.TestSubworld: Test Subworld
+
+Items: {
+	ResonantShard: {
+		DisplayName: Resonant Shard
+		Tooltip: UNUSED
+	}
+}
