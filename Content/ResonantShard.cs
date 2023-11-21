@@ -8,9 +8,7 @@ namespace PocketDimensions.Content;
 
 public class ResonantShard : ModItem
 {
-	public PocketDimensionOptions options;
-
-	public override string Texture => $"Terraria/Images/Item_{ItemID.MagicMirror}";
+	public PocketDimensionOptions Options { get; set; } = new(1000, 1000, "Test");
 
 	public override void SaveData(TagCompound tag) {
 		tag[nameof(PocketDimensionOptions)] = options;
