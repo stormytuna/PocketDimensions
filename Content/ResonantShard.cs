@@ -11,11 +11,11 @@ public class ResonantShard : ModItem
 	public PocketDimensionOptions Options { get; set; } = new(1000, 1000, "Test");
 
 	public override void SaveData(TagCompound tag) {
-		tag[nameof(PocketDimensionOptions)] = options;
+		tag[nameof(PocketDimensionOptions)] = Options;
 	}
 
 	public override void LoadData(TagCompound tag) {
-		options = tag.Get<PocketDimensionOptions>(nameof(PocketDimensionOptions)) ?? new PocketDimensionOptions(0, 0, "");
+		Options = tag.Get<PocketDimensionOptions>(nameof(PocketDimensionOptions)) ?? new PocketDimensionOptions(0, 0, "");
 	}
 
 	public override void ModifyTooltips(List<TooltipLine> tooltips) {
@@ -26,9 +26,9 @@ public class ResonantShard : ModItem
 
 		tooltips.RemoveAt(index);
 		tooltips.InsertRange(index, new List<TooltipLine> {
-			new(Mod, "Tooltip0", $"Width: {options.Width}"),
-			new(Mod, "Tooltip0", $"Height: {options.Height}"),
-			new(Mod, "Tooltip0", $"Name: {options.Name}")
+			new(Mod, "Tooltip0", $"Width: {Options.Width}"),
+			new(Mod, "Tooltip0", $"Height: {Options.Height}"),
+			new(Mod, "Tooltip0", $"Name: {Options.Name}")
 		});
 	}
 }

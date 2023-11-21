@@ -9,7 +9,7 @@ public class EnterSubworld : ModCommand
 {
 	public override void Action(CommandCaller caller, string input, string[] args) {
 		if (Main.LocalPlayer.HeldItem.ModItem is ResonantShard resonantShard) {
-			ModContent.GetInstance<RubySubworld>().CurrentOptions = resonantShard.options;
+			ModContent.GetInstance<RubySubworld>().CurrentOptions = resonantShard.Options;
 			SubworldSystem.Enter<RubySubworld>();
 		}
 	}

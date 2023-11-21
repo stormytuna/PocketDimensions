@@ -11,7 +11,7 @@ public class ChangeOptions : ModCommand
 			int width = int.Parse(args[0]);
 			int height = int.Parse(args[1]);
 			string name = args[2];
-			resonantShard.options = new PocketDimensionOptions(width, height, name);
+			resonantShard.Options = new PocketDimensionOptions(width, height, name);
 
 			Main.NewText($"Updated options! Width: {width}, Height: {height}, Name: {name}");
 		}
